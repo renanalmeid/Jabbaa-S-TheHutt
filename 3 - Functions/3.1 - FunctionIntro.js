@@ -128,11 +128,43 @@ console.log(plantNeedsWater('Tuesday'));
 /*
 ES6 introduced arrow function syntax, a shorter way to write functions by using the special “fat arrow” () => notation.
 
-
 */
+const plantNeedsWater = (day) => {
+  if (day === 'Wednesday') {
+    return true;
+  } else {
+    return false; 
+  }
+};
 
-// ######
+
+// ###### Concise Body Arrow Functions
+
 /*
 
+zero parameters
+const functionName = () =>{};
+
+one parameter
+const functionName = paramOne =>{};
+
+two or more parameters
+const functionName = (paramOne,paramTwo) => {};
+----------------------------------------------------
+single-line block 
+const sumNumbers = number => number + number;
+
+multi-line block 
+const sumNumbers = number =>{
+  const sum = number+number;
+  return sum;
+}
+
+
 */
 
+const plantNeedsWater = (day) => {
+  return day === 'Wednesday' ? true : false;
+};
+
+const plantNeedsWater = day => day === 'Wednesday'?true : false;
